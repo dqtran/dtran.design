@@ -1,0 +1,55 @@
+{% extends "layouts/layout.html" %}
+
+{% block header %}
+{% if req.user %}
+	{% include "includes/header-primary--user.html" %}
+{% else %}
+	{% include "includes/header-primary.html" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<section class="register-container">
+	<h1 class="signup__header">Sign Up for dtran-design</h1>
+	<form role="form" action="/auth/local/register" method="post">
+		<div class="signup__section">
+			<label class="signup__label" for="exampleEmailInput">Your email</label>
+			<input class="signup__input" type="email" name="email" placeholder="test@mailbox.com" value="{{ form.email }}">
+		</div>
+		<div class="signup__section">
+			<label class="signup__label" for="exampleEmailInput">Your username</label>
+			<input class="signup__input" type="text" name="username" placeholder="bob"  value="{{ form.username }}">
+		</div>
+		<div class="signup__section">
+			<label class="signup__label" for="exampleEmailInput">Your password</label>
+			<input class="signup__input" type="password" name="password" id="password">
+		</div>
+		<input class="button-primary" type="submit" value="Sign Up">
+	</form>
+</section>
+
+<!-- <section class="register-container">
+	<p style="margin-bottom: 0.5em;">Already have an account?</p>
+	{% if me %}
+		<a class="button" href="/welcome">Opt in!</a>
+	{% else %}
+		<a class="button" href="/auth/login">Log In</a>
+	{% endif %}
+</section> -->
+	 
+{% endblock %}
+
+{% block footer %}
+	{% include "includes/footer.html" %}
+{% endblock %}
+
+{% block page_settings %}
+	"name": "login"
+{% endblock %}
+
+{% block bootstrap %}
+	"s": [
+		{"message": "Bootstrapped Message"}
+	]
+{% endblock %}

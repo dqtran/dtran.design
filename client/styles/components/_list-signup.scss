@@ -1,0 +1,14 @@
+.list-signup {
+	margin-top: $spacing-unit*2;
+	&__header {
+		@include type--base-sub1;
+		margin-bottom: $spacing-unit;
+		text-align: center;
+	}
+	&__body { text-align: center; }
+}
+
+.form-email {
+	padding: $spacing-unit/8 $spacing-unit/4;
+	margin-bottom: $spacing-unit/2;
+}

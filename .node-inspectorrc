@@ -1,0 +1,8 @@
+{
+  "web-port": 8080,
+  "web-host": "127.0.0.1",
+  "debug-port": 5858,
+  "save-live-edit": true,
+  "preload": false,
+  "stack-trace-limit": 50
+}

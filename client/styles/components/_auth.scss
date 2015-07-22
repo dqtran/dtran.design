@@ -1,0 +1,23 @@
+.login-container,
+.register-container {
+	@include container;
+	margin-bottom: $spacing-unit*2;
+}
+
+.login__header,
+.signup__header { margin-bottom: $spacing-unit*2; }
+
+.login__label,
+.signup__label {
+	@include type--base-sub2;
+	display: block;
+}
+
+.login__input,
+.signup__input {
+	@include type--base-body;
+	padding: $spacing-unit/8 $spacing-unit/4;
+}
+
+.login__section,
+.signup__section { margin-bottom: $spacing-unit/2; }

@@ -1,0 +1,163 @@
+/* --- Functions --- */
+
+// Convert pixels to ems
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em
+}
+
+@function pxToRem($px) {
+	$rem: $px / $browser-context;
+	@return #{$rem}rem;
+}
+
+
+
+// Placeholder @mixin for Sass
+//
+// A mixin to style placeholders in HTML5 form elements.
+// Includes also a .placeholder class to be used with a polyfill e.g.
+// https://github.com/mathiasbynens/jquery-placeholder
+// Requires Sass 3.2.
+//
+// Example usage (.scss):
+// 
+// input {
+//   @include placeholder {
+//     /* styles for placeholder here */
+//   }
+// }
+//
+ 
+@mixin placeholder {
+		&::-webkit-input-placeholder {
+				@content;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+				@content;
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+				@content;
+		}
+
+		&:-ms-input-placeholder {
+				@content;
+		}
+
+		&.placeholder {
+				@content;
+		}
+}
+
+/* Layout */
+@mixin container {
+	@include cf();
+	width: 100%;
+	max-width: $content-width;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+	@media (min-width: 400px) {
+		width: 85%;
+		padding: 0;
+	}
+	@media (min-width: 550px) { width: 80%; }
+}
+
+/* Type */
+// Stacks
+@mixin font-stack--body {
+	// Set up the base font family
+	font-family: $primary-font;
+	margin-bottom: $spacing-unit/4;
+}
+
+@mixin font-stack--headers {
+	// Make sure headers inherit the same font family
+	// This is where we can add global size and weight rules if necessary
+	@include font-stack--body;
+	margin-bottom: $spacing-unit/2;
+}
+
+// Styles
+@mixin type--base-body {
+	// Extend the body stack and define the most common body style
+	@include font-stack--body;
+	margin-top: 0;
+	font-size: $base-font-size;
+	font-weight: $regular;
+	line-height: $base-line-height;
+	color: $grey--black;
+}
+
+@mixin type--base-body-black {
+	// Extend the body stack and define the most common body style
+	@include type--base-body;
+	color: $white--logo;
+}
+
+@mixin type--base-small {
+	// For smaller size body type, extend the type base body with a smaller font size
+	@include type--base-body;
+	font-size: $small-font-size;
+}
+
+@mixin type--base-xsmall {
+	// For smallest size body type, extend the type base body with a smaller font size
+	@include type--base-body;
+	font-size: $xsmall-font-size;
+}
+
+@mixin type--base-header {
+	// Extend the header stack and define the most common header style
+	@include font-stack--headers;
+	margin: $spacing-unit/2 0;
+	font-size: $med-font-size;
+	font-weight: $regular;
+	line-height: $base-line-height*0.8;
+	color: $grey--med;
+	letter-spacing: 0;
+}
+
+@mixin type--base-h1 {
+	// Extend the type base header and define the highest priority header
+	@include type--base-header;
+	font-size: $xlarge-font-size;
+	font-weight: $light;
+}
+
+@mixin type--base-h2 {
+	// Extend the type base header and define the second priority header
+	@include type--base-header;
+	margin-bottom: $spacing-unit/8;
+	font-weight: $semibold;
+	color: $grey;
+}
+
+@mixin type--base-sub1 {
+	// Define the most common subheader style
+	@include type--base-h2;
+	font-weight: $regular;
+}
+
+@mixin type--base-sub2 {
+	// Define the second priority subheader style
+	@include type--base-small;
+	margin: $spacing-unit/8 0;
+	font-weight: $semibold;
+}
+
+@mixin type--base-menu-item {
+	// Extend type base subhead 2, lighter weight
+	@include type--base-sub2;
+	font-weight: $regular;
+}
+
+@mixin type--overlay-light {
+	color: $white;
+  /*text-shadow: 0 0 8px $grey;*/
+}

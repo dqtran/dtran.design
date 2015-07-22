@@ -1,0 +1,24 @@
+# ------------------------------ #
+# dependencies
+# ------------------------------ #
+
+node_modules
+
+# ------------------------------ #
+# generated files
+# ------------------------------ #
+
+.sass-cache
+client/components
+.tmp
+utils
+
+# ------------------------------ #
+# local development files
+# ------------------------------ #
+
+npm-debug.log
+newrelic_agent.log
+config/env/local.js
+*.sublime-workspace
+server/migrations/config.json

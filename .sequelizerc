@@ -1,0 +1,9 @@
+var path = require('path');
+
+// DOCS: https://github.com/sequelize/cli#options
+
+module.exports = {
+  'config':          path.resolve('server', 'migrations', 'config.json'),
+  'migrations-path': path.resolve('server', 'migrations'),
+  'models-path':	 path.resolve('server', 'models')
+};

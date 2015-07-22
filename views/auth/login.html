@@ -1,0 +1,47 @@
+{% extends "layouts/layout.html" %}
+
+{% block header %}
+{% if req.user %}
+	{% include "includes/header-primary--user.html" %}
+{% else %}
+	{% include "includes/header-primary.html" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+	
+<section class="login-container">
+	<h1 class="login__header">Log in to dtran-design</h1>
+	<form role="form" action="/auth/local" method="post">
+		<div class="login__section">
+			<label class="login__label" for="exampleEmailInput">User</label>
+			<input class="login__input" type="text" name="identifier" placeholder="Email or Username">
+		</div>
+		<div class="login__section">
+			<label class="login__label" for="exampleEmailInput">Password</label>
+			<input class="login__input" type="password" name="password" id="password">
+		</div>
+		<input class="button-primary" type="submit" value="Log In">
+	</form>
+</section>
+
+<!-- <section class="login-container">
+	<p style="margin-bottom: 0.5em;">Don't have an account with Seekr?</p>
+	<a href="/register" class="button">Sign Up</a>
+</section> -->
+     
+{% endblock %}
+
+{% block footer %}
+	{% include "includes/footer.html" %}
+{% endblock %}
+
+{% block page_settings %}
+	"name": "login"
+{% endblock %}
+
+{% block bootstrap %}
+	"examples": [
+		{"message": "Bootstrapped Message"}
+	]
+{% endblock %}

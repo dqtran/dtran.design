@@ -1,0 +1,15 @@
+.page-footer {
+  @extend .page-header;
+  &__wrapper {
+    padding: $spacing-unit 0;
+    background: $grey--black;
+  }
+  &__social {
+    clear: both;
+    text-align: center;
+    &-link {
+      padding: 0 $spacing-unit/4;
+      text-decoration: none;
+    }
+  }
+}

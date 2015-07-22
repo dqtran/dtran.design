@@ -1,0 +1,174 @@
+
+@import "base/jeet/index";
+@import "global/buttons";
+
+/* Base Styles 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+	font-family: $primary-font;
+	font-size: $base-font-size;
+	font-weight: $regular;
+  line-height: $base-line-height;
+	color: $grey;
+  background-color: $white;
+}
+
+// .container {
+//   max-width: 1150px;
+//   width: 100%;
+// }
+
+#logo {
+	max-width: em(200);
+}
+
+
+/* Layout 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container { @include container; }
+
+/* Typography 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1 { @include type--base-h1; }
+
+h2,
+h3,
+h4,
+h5,
+h6 { @include type--base-header; }
+
+p, li, a { font-weight: $regular; }
+
+p {
+  @include type--base-body;
+}
+
+ul { list-style-type: disc;}
+
+li { 
+  margin-bottom: 0;
+  line-height: $base-line-height*1.25;
+}
+
+a { 
+  color: $blue;
+  &:hover,
+  &:focus { color: lighten($blue, 10%); }
+  &:active { color: darken($blue, 20%); }
+  &:hover { cursor: pointer; }
+}
+
+.panel {
+
+  &__header { @include type--base-h2; }
+  &__subhead {
+    @include type--base-sub2;
+    &--pre { color: $grey--med-light; }
+  }
+  &__body { color: lighten($grey, 10%); }
+}
+
+/* Forms 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 42px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: $spacing-unit/4;
+  background-color: $white;
+  border: 1px solid $grey--light;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid $grey;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .25rem;
+  font-size: $xsmall-font-size;
+  font-weight: $semibold;
+  color: $grey--med-light;
+  letter-spacing: 0.25px; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+// Search Bars
+.fa { color: $grey--light; }
+
+.search_wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $spacing-unit;
+}
+
+input[type="search"] {
+  padding-left: 38px;
+  margin-bottom: $spacing-unit/4;
+  vertical-align: top;
+  font-size: $small-font-size;
+}
+
+.search-med { 
+  width: 280px;
+  margin-bottom: $spacing-unit/4;
+  @media (min-width: 768px) {
+    width: 480px;  
+  }
+}
+
+.button-search { 
+  margin-left: 0;
+  margin-bottom: $spacing-unit/4;
+}
+
+.icon_wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

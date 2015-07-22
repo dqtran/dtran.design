@@ -1,0 +1,335 @@
+{% extends "layouts/layout.html" %}
+
+{% block header %}
+{% if req.user %}
+	{% include "includes/header-primary--user.html" %}
+{% else %}
+	{% include "includes/header-primary.html" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<section class="container page-content__wrapper">
+<h2>Sandbox</h2>
+	<section class="sandbox">
+	<!-- Basic Type Styles -->
+		<h1>Header One <br>Seekr Experiences</h1>
+			<h2>Header Two Like School in Summer Time</h2>
+
+			<h3 class="panel__header">Experience Title or Provider Name</h3>
+			<h4 class="panel__subhead"><span class="panel__subhead--pre">Near </span>Chiang Mai, Thailand</h4>
+			
+			<ul>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+			
+			<p>Paragraph text. Seekr is an experience&#45;driven travel platform bridging the gap between adventurous travelers and local knowledge. Between the five members of our team, we have visited over sixty countries, and a major motivation for us to build out the Seekr platform is to enable others to share the same types of cultural experiences we’ve been lucky enough to experience.</p>
+
+
+
+			<p class="panel__body">Experience Description. Seekr is an experience&#45;driven travel platform bridging the gap between adventurous travelers and local knowledge.</p>
+
+			<p><a href="#">Book Experience</a><br></p>
+
+			<a class="button">Button</a><br>
+			<a class="button button-primary">Primary Button</a><br>
+			<a class="button button-secondary">Secondary Button</a><br>
+		<!-- END Basic Type Styles -->
+		</section>
+		
+		<section class="sandbox">
+		<!-- Search Bar -->
+			<div class="search_wrapper">
+		    <span class="icon_wrapper"><i class="fa fa-search"></i></span>
+		    <input type="search" class="search search-med" placeholder="Search by Location">
+		    <button class="button button-primary button-search" type="button">Search</button>
+	  	</div>
+  	<!-- END Search Bar -->
+		</section>
+
+		<section class="sandbox">
+		<!-- Booking Menu -->
+			<div class="booking-menu__wrapper">
+				<div class="booking-menu">
+					<div class="booking-menu__header">
+						<span class="price__number">$149</span>
+						<span class="price__currency">usd</span>
+					</div>
+					<div class="booking-menu__main">
+						<div class="booking-menu__date-picker">
+							<label class="booking-menu__label" for="date-picker">Dates Available</label>
+							<input class="booking-menu__input" name="date-picker" type="text" placeholder="mm/dd/yyyy">
+						</div>
+						<div class="booking-menu__dropdown">
+							<label class="booking-menu__label" for="Travelers">Travelers</label>
+							<select class="booking-menu__travelers" name="travelers">
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>
+						</div>
+						<a class="button button-primary booking-menu__book-button">Book Experience</a>
+						<a class="button booking-menu__save-button">Save to Trip</a>
+					</div>
+					<div class="booking-menu__footer"></div>
+				</div>
+			</div>
+		<!-- END Booking Menu -->
+		</section>
+
+		<section class="sandbox">
+		<!-- Sign Up -->
+			<div class="sign-up__wrapper">
+				<h3 class="sign-up__header">Sign up for Seekr</h3>
+				<input class="sign-up__first-name" name="first-name" type="text" placeholder="First Name">
+				<label class="sign-up__label" for="first-name">First Name</label>
+				<input class="sign-up__last-name" name="last-name" type="text" placeholder="Last Name">
+				<label class="sign-up__label" for="last-name">Last Name</label>
+				<input class="sign-up__email" name="email" type="text" placeholder="E-Mail Address">
+				<label class="sign-up__label" for="email">E&#45;Mail Address</label>
+				<button class="button button-primary sign-up__button" type="submit">
+					<span class="sign-up__button-text">Sign Up</span>
+				</button>
+				<div class="sign-up__footer">
+					<p class="sign-up__login">Already have an account? <a class="sign-up__login-link">Log In</a></p>
+				</div>
+			</div>
+		<!-- END Sign Up -->
+		</section>
+
+		<section class="sandbox">
+		<!-- Log In -->
+			<div class="log-in__wrapper">
+				<h3 class="log-in__header">Log in to Seekr</h3>
+				<input class="log-in__email" name="email" type="text" placeholder="E-Mail Address">
+				<label class="log-in__label" for="email">E&#45;Mail Address</label>
+				<input class="log-in__pass" name="pass" type="text" placeholder="Password">
+				<label class="log-in__label" for="pass">Password</label>
+				<p class="log-in__forgot-pass"><a class="log-in__login-link">Forgot Password?</a></p>
+
+				<button class="button button-primary log-in__button" type="submit">
+					<span class="log-in__button-text">Log In</span>
+				</button>
+				<div class="log-in__footer">
+					<p class="log-in__login">Don't have an account? <a class="log-in__signup-link">Sign Up</a></p>
+				</div>
+			</div>
+		<!-- END Log In -->
+		</section>
+
+		<section class="sandbox">
+		<!-- Reset Password -->
+			<div class="reset-pass__wrapper">
+				<h3 class="reset-pass__header">Reset Password</h3>
+				<input class="reset-pass__email" name="email" type="text" placeholder="E-Mail Address">
+				<label class="reset-pass__label" for="email">E&#45;Mail Address</label>
+				<div class="reset-pass__footer">
+					<button class="button button-primary reset-pass__button" type="submit">
+						<span class="reset-pass__button-text">Send Reset Link</span>
+					</button>
+				</div>
+			</div>
+		<!-- END Reset Password -->
+		</section>
+
+		<section class="sandbox">
+		<!-- New Password -->
+			<div class="new-pass__wrapper">
+				<h3 class="new-pass__header">New Password</h3>
+				<input class="new-pass__pass" name="pass" type="text" placeholder="New Password">
+				<label class="new-pass__label" for="pass">New Password</label>
+				<input class="new-pass__pass-confirm" name="pass-confirm" type="text" placeholder="Confirm Password">
+				<label class="new-pass__label" for="pass-confirm">Confirm Password</label>
+				<div class="new-pass__footer new-pass__footer--border">
+					<button class="button button-primary new-pass__button" type="submit">
+						<span class="new-pass__button-text">Save &amp; Continue</span>
+					</button>
+				</div>
+			</div>
+		<!-- END New Password -->
+		</section>
+
+		<section class="sandbox">
+		<!-- Notifications -->
+			<div class="notification__wrapper notification--secondary">
+				<p class="notification__text notification--secondary__text">A link to reset your password has been sent to {email address}.</p>
+			</div>
+
+			<div class="notification__wrapper notification--primary">
+				<p class="notification__text notification--primary"><a class="notification__link notification--primary__link">Click here to reset your password.</a></p>
+			</div>
+		<!-- END Notifications -->
+		</section>
+
+		<section class="sandbox">
+		<section class="grid">
+			<!-- Grid -->
+
+			<!-- Row 1 -->
+			<div class="grid-unit__container grid-unit__container--one-quarter">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--provider" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_16.png')">
+						<a class="grid-unit__link grid-unit__link--provider">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Featured Provider</p>
+									<h3 class="grid-unit__title">Provider X.</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-unit__container grid-unit__container--one-quarter">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--provider" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_18.png')">
+						<a class="grid-unit__link grid-unit__link--provider">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Featured Provider</p>
+									<h3 class="grid-unit__title">Provider X.</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-unit__container grid-unit__container--one-quarter">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--provider" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_19.png')">
+						<a class="grid-unit__link grid-unit__link--provider">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Featured Provider</p>
+									<h3 class="grid-unit__title">Provider X.</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-unit__container grid-unit__container--one-quarter">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--provider" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_21.png')">
+						<a class="grid-unit__link grid-unit__link--provider">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Featured Provider</p>
+									<h3 class="grid-unit__title">Provider X.</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 2 -->
+
+			<div class="grid-unit__container grid-unit__container--one-half">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--exp" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_03.png')">
+						<a class="grid-unit__link grid-unit__link--exp">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<h3 class="grid-unit__title">Doi Inthanon Motorcycle &amp; Photography Tour</h3>
+									<p class="grid-unit__desc">Near Chiang Mai, Thailand</p>
+								</div>
+								<span class="grid-unit__price-point">$149</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-unit__container grid-unit__container--one-half grid-unit__container--one-half-omega">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--location" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_05.png')">
+						<a class="grid-unit__link grid-unit__link--location">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Experiences Near</p>
+									<h3 class="grid-unit__title">Rio de Janeiro</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 3 -->
+
+			<div class="grid-unit__container grid-unit__container--full-width">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--location" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_09.png')">
+						<a class="grid-unit__link grid-unit__link--location">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<p class="grid-unit__desc">Experiences Near</p>
+									<h3 class="grid-unit__title">Buenos Aires</h3>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Row 4 -->
+
+			<div class="grid-unit__container grid-unit__container--one-half">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--exp" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_11.png')">
+						<a class="grid-unit__link grid-unit__link--exp">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<h3 class="grid-unit__title">Views from Nucleo Pedra Grande</h3>
+									<p class="grid-unit__desc">Near Sao Paulo</p>
+								</div>
+								<span class="grid-unit__price-point">$79</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-unit__container grid-unit__container--one-half grid-unit__container--one-half-omega">
+				<div class="grid-unit">
+					<div class="grid-unit__image grid-unit__image--exp" style="background-image: url('https://dl.dropboxusercontent.com/u/21344830/Seekr_PhotoGrid/images/Seekr_UI_Grid_v1_13.png')">
+						<a class="grid-unit__link grid-unit__link--exp">
+							<div class="grid-unit__inner">
+								<div class="grid-unit__text">
+									<h3 class="grid-unit__title">Negev Desert Trek</h3>
+									<p class="grid-unit__desc">Near Tel Aviv, Israel</p>
+								</div>
+								<span class="grid-unit__price-point">$231</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- END Grid -->
+			</section>
+		</section>
+</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+	{% include "includes/footer.html" %}
+{% endblock %}
+
+{% block page_settings %}
+	"name": "index"
+{% endblock %}
+
+{% block bootstrap %}
+	"examples": [
+		{"message": "Bootstrapped Message"}
+	]
+{% endblock %}
