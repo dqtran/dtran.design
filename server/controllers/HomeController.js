@@ -4,7 +4,7 @@ module.exports = {
 
     'index': function(req, res, next){
         res.view('index', {
-          title: 'dtran.design'
+          title: 'dtran-design'
         });
     },
     'seekr': function(req, res, next){
