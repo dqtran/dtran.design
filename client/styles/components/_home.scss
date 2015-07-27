@@ -1,21 +1,22 @@
 .page-content--home {
-
 	background-color: $red;
 	width: 100%;
-	height: 700px;
+	height: 700px; 
 	&__logo{
 		margin: 0 auto;
 		text-align: center;
 		display: block;
-		padding-top: 22%;
 		width: 222px;
 		height: 222px;
+		@media (max-width: 768px) { padding-top: 50%;}
+		@media (min-width: 1024px) { padding-top: 22%;}
+		
 	}
 	&__logo-small{
 		margin: 0 auto;
 		text-align: center;
 		display: block;
-		padding-top: 2%;
+		padding-top: 5%;
 		width: 50px;
 		height: 50px;
 	}
@@ -24,7 +25,7 @@
 		@include type--overlay-light;
 		padding-top: $spacing-unit/2;
 		text-align: center;
-		@media (min-width: 768px) {
+		@media (max-width: 768px) {
 			font-size: $med-font-size;
 			font-color: $white;
 		}
@@ -55,9 +56,7 @@
 		text-align: center;
 		display: block;
 		padding-bottom: $spacing-unit*2;
-		@media (min-width: 768px) {
-			width: 300px;
-		}
+		@media (max-width: 768px) {	width: 80%; }
 		@media (min-width: 1024px) { width: 460px; }
 	}
 	&__asset--process {
@@ -65,14 +64,14 @@
 		text-align: center;
 		display: block;
 		padding-bottom: $spacing-unit*2;
-		@media (min-width: 768px) { width: 300px; }
+		@media (max-width: 768px) { width: 80%; }
 		@media (min-width: 1024px) { width: 500px; }
 	}
 	&__info {
 		@include type--base-body;
 		margin: 0 auto;
 		text-align: left;
-		@media (min-width: 768px) { width: 300px; }
+		@media (max-width: 768px) { width: 80%; }
 		@media (min-width: 1024px) { width: 700px; }
 	}
 	&__work--seekr {
@@ -82,10 +81,10 @@
 		background: url("https://s3-us-west-2.amazonaws.com/dtran-design/assets/seekr.png");
 		background-size: 100% 100%;
 		@media (max-width: 768px) {
-			width: 400px;
+			width: 100%;
 			height: 300px;
 			background-size: 300%;
-			background-position: center -100px;
+			background-position: -500px center;
 			background-repeat: no-repeat;
 		}
 		@media (min-width: 1024px) { 		
@@ -100,7 +99,7 @@
 		margin-bottom: $spacing-unit;
 		background: url("https://s3-us-west-2.amazonaws.com/dtran-design/assets/cleancut.png");
 		@media (max-width: 768px) {
-			width: 400px;
+			width: 100%;
 			height: 300px;
 			background-size: 300%;
 			background-position: center center;
@@ -119,7 +118,26 @@
 		background: url("https://s3-us-west-2.amazonaws.com/dtran-design/assets/soccerfriends.png");
 		background-size: 100% 100%;
 		@media (max-width: 768px) {
-			width: 400px;
+			width: 100%;
+			height: 300px;
+			background-size: 250%;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		@media (min-width: 1024px) { 		
+			height: 300px;
+			width: 940px;
+			background-size: 100% 100%;
+		}
+	}
+	&__work--skratchlabs {
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: $spacing-unit;
+		background: url("https://s3-us-west-2.amazonaws.com/dtran-design/assets/skratchlabs.jpg");
+		background-size: 100% 100%;
+		@media (max-width: 768px) {
+			width: 100%;
 			height: 300px;
 			background-size: 250%;
 			background-position: center center;
@@ -165,12 +183,24 @@
 		display: block;
 		@media (max-width: 768px) {
 			width: 331px;
-			padding-top: 32%;
+			padding-top: 35%;
 		}
 		@media (min-width: 1024px) { 		
 			width: 422px;
 			height: 73px;
 			padding-top: 15%;
+		}
+	}
+	&__logo--skratchlabs {
+		margin: 0 auto;
+		display: block;
+		@media (max-width: 768px) {
+			width: 300px;
+			padding-top: 30%;
+		}
+		@media (min-width: 1024px) { 		
+			width: 450px;
+			padding-top: 10%;
 		}
 	}
 }

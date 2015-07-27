@@ -9,4 +9,6 @@ module.exports = function (app, express) {
 	app.get('/cleancut', abe.controllers.home.cleancut);
 
 	app.get('/soccerfriends', abe.controllers.home.soccerfriends);
+
+	app.get('/skratchlabs', abe.controllers.home.skratchlabs);
 };

@@ -22,6 +22,11 @@ module.exports = {
           title: 'Soccer Friends'
         });
     },
+    'skratchlabs': function(req, res, next){
+        res.view('skratchlabs', {
+          title: 'Skratch Labs'
+        });
+    }
 };
 
 function getPassortProviders(){
