@@ -1,5 +1,6 @@
 .page-footer {
   @extend .page-header;
+  width: 100%;
   &__wrapper {
     padding: $spacing-unit 0;
     background: $grey--black;
