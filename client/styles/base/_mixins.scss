@@ -102,8 +102,11 @@ $browser-context: 16; // Default
 
 @mixin type--base-small {
 	// For smaller size body type, extend the type base body with a smaller font size
-	@include type--base-body;
-	font-size: $small-font-size;
+	font-size: $base-font-size;
+	font-weight: $regular;
+	color: $white;
+	margin-top: $spacing-unit/4;
+	margin-bottom: $spacing-unit/4;
 }
 
 @mixin type--base-xsmall {
