@@ -1,31 +1,25 @@
 {% extends "layouts/layout.html" %}
 
-{% block intro %}
-	{% include "includes/home/intro.html" %}
-{% endblock %}
+{% block content %}
 
-{% block approach %}
-	{% include "includes/home/approach.html" %}
-{% endblock %}
+	{% block intro %}
+		{% include "includes/home/intro.html" %}
+	{% endblock %}
 
-{% block work %}
-	{% include "includes/home/work.html" %}
-{% endblock %}
+	{% block approach %}
+		{% include "includes/home/approach.html" %}
+	{% endblock %}
 
-{% block process %}
-	{% include "includes/home/process.html" %}
-{% endblock %}
+	{% block work %}
+		{% include "includes/home/work.html" %}
+	{% endblock %}
 
-{% block footer %}
-	{% include "includes/footer.html" %}
+	{% block process %}
+		{% include "includes/home/process.html" %}
+	{% endblock %}
+
 {% endblock %}
 
 {% block page_settings %}
 	"name": "index"
-{% endblock %}
-
-{% block bootstrap %}
-	"examples": [
-		{"message": "Bootstrapped Message"}
-	]
 {% endblock %}
