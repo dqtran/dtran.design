@@ -1,23 +1,17 @@
 {% extends "layouts/layout.html" %}
 
-{% block intro %}
-	{% include "includes/skratchlabs/intro.html" %}
-{% endblock %}
+{% block content %}
+	
+	{% block intro %}
+		{% include "includes/skratchlabs/intro.html" %}
+	{% endblock %}
 
-{% block work %}
-	{% include "includes/home/work.html" %}
-{% endblock %}
+	{% block work %}
+		{% include "includes/home/work.html" %}
+	{% endblock %}
 
-{% block footer %}
-	{% include "includes/footer.html" %}
 {% endblock %}
 
 {% block page_settings %}
 	"name": "index"
-{% endblock %}
-
-{% block bootstrap %}
-	"examples": [
-		{"message": "Bootstrapped Message"}
-	]
 {% endblock %}
