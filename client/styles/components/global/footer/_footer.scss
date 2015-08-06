@@ -1,5 +1,4 @@
 .page-footer {
-  @extend .page-header;
   width: 100%;
   &__wrapper {
     padding: $spacing-unit 0;
@@ -8,7 +7,7 @@
   &__social {
     clear: both;
     text-align: center;
-    &-link {
+    &--link {
       padding: 0 $spacing-unit/4;
       text-decoration: none;
     }

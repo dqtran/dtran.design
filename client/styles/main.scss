@@ -1,9 +1,5 @@
-// VENDOR
-// @import "vendor/skeleton";
-
 // BASE
 @import "base/variables";
-@import "base/mixins";
 @import "base/mixins";
 @import "base/normalize";
 @import "base/icons";
@@ -11,16 +7,11 @@
 
 // COMPONENTS
 @import "components/global";
-@import "components/global/header/header";
 @import "components/global/footer/footer";
 
+// PAGES
 @import "components/home";
 @import "components/project";
-@import "components/auth";
-@import "components/dashboard";
-@import "components/sandbox";
-@import "components/list-signup";
-
 
 
 
