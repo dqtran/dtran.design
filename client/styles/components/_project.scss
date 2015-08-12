@@ -1,3 +1,186 @@
+/* Common */
+.page-content--project-body-alternate {
+	position: relative;
+	background-color: $silver;
+	&__header {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: $semibold;
+		padding-top: $spacing-unit;
+		// margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		font-size: $regular-font-size;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__asset {
+		display: block;
+		margin: 0 auto;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		@media (min-width: 300px) {	width: 120px; }
+		@media (min-width: 768px) { width: 140px; }
+		@media (min-width: 1024px) { width: 150px; }
+	}
+	&__info {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		padding-bottom: $spacing-unit;
+		margin-bottom: $spacing-unit/2;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__list {
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+	}
+	&__insight{
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		font-style: italic;
+		font-weight: $semibold;
+		margin-bottom: $spacing-unit/3;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__line{
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: $spacing-unit/3;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+}
+
+.page-content--project-body {
+	margin-top: $spacing-unit;
+	position: relative;
+	&__header {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: $semibold;
+		margin-bottom: $spacing-unit;
+		font-size: $regular-font-size;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__asset {
+		display: block;
+		margin: 0 auto;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		@media (min-width: 300px) {	width: 120px; }
+		@media (min-width: 768px) { width: 140px; }
+		@media (min-width: 1024px) { width: 150px; }
+	}
+	&__info {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: $spacing-unit/2;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__list {
+		padding-bottom: $spacing-unit;
+	}
+	&__line{
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: $spacing-unit/3;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__role{
+		@include type--base-body;
+		margin: 0 auto;
+		font-size: $med-font-size;
+		text-align: center;
+		font-style: italic;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__insight{
+		@include type--base-body;
+		margin: 0 auto;
+		font-size: $med-font-size;
+		text-align: center;
+		font-style: italic;
+		font-weight: $semibold;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__quote{
+		@include type--base-header-black;
+		list-style-type: none;
+		margin: 0 auto;
+		text-align: center;
+		font-style: italic;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__video {
+		border: none;
+		frameborder: 0;
+		margin-top: $spacing-unit;
+		@media (min-width: 300px) { width: 90%; height: 162px; }
+		@media (min-width: 768px) { width: 600px; height: 338px; }
+		@media (min-width: 1024px) { width: 700px; height: 393px;}
+	}
+	&__profile-pic {
+		display: block;
+		margin: 0 auto;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		width: 200px;
+		border-radius: 100px;
+	}
+	&__work-snapshot {
+		margin-top: $spacing-unit/4;
+		margin-bottom: $spacing-unit/2;
+		width: 100%;
+	}
+	&__to-top {
+		margin: 0 auto;
+		width: 100px;
+		height: 100px;
+		border: 1px solid $red;
+		background-color: $red;
+		border-radius: 60px;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+	}
+	&__to-top-text {
+		@include type--base-small;
+		text-align: center;
+		padding-top: 26%;
+	}
+}
+
+
+/*  Seekr  */
 .page-content--seekr {
 	background: url('https://s3-us-west-2.amazonaws.com/dtran-design/assets/seekr--bg.jpg');
 	@media (min-width: 300px) {
@@ -48,6 +231,74 @@
 	}
 }
 
+.page-content--seekr-body-alternate {
+	position: relative;
+	background-color: $silver;
+	&__header {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: $semibold;
+		padding-top: $spacing-unit;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		font-size: $regular-font-size;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+}
+
+.page-content--seekr-body {
+	margin-top: $spacing-unit;
+	position: relative;
+	&__header {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: $semibold;
+		margin-bottom: $spacing-unit;
+		font-size: $regular-font-size;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__asset {
+		text-align: center;
+		display: block;
+		padding-bottom: $spacing-unit;
+		@media (min-width: 300px) {	width: 300px; }
+		@media (min-width: 768px) { width: 450px; }
+		@media (min-width: 1024px) { width: 450px; }
+	}
+	&__info {
+		@include type--base-body;
+		margin: 0 auto;
+		text-align: left;
+		font-style: italic;
+		margin-bottom: $spacing-unit/2;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+	&__list {
+		padding-bottom: $spacing-unit;
+	}
+	&__team-member{
+		@include type--base-body;
+		list-style-type: none;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: $spacing-unit/3;
+		@media (min-width: 300px) { width: 80%; }
+		@media (min-width: 768px) { width: 80%; }
+		@media (min-width: 1024px) { width: 700px; }
+	}
+}
+
+
+/* Cleancut */
+
 .page-content--cleancut {
 	background: url('https://s3-us-west-2.amazonaws.com/dtran-design/assets/cleancut--bg.jpg');
 	@media (min-width: 300px) {
@@ -94,6 +345,9 @@
 		}
 	}
 }
+
+
+/* Soccer Friends */
 
 .page-content--soccerfriends {
 	background: url('https://s3-us-west-2.amazonaws.com/dtran-design/assets/soccerfriends-bg.jpg');
@@ -142,12 +396,15 @@
 	}
 }
 
+
+/* Skratchs Labs */
+
 .page-content--skratchlabs {
 	background: url('https://s3-us-west-2.amazonaws.com/dtran-design/assets/skratchlabs--bg.jpg');
 	@media (min-width: 300px) {
-		background-position: -280px center;
+		background-position: -300px center;
 		background-repeat: no-repeat;
-		background-size: 200% ;
+		background-size: 250% ;
 		height: 600px;
 	}
 	@media (min-width: 768px) { 

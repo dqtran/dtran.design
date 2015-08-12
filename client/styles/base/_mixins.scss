@@ -84,6 +84,11 @@ input {
 	color: $white;
 	letter-spacing: 0;
 }
+@mixin type--base-header-black {
+	@include type--base-header;
+	font-size: $large-font-size;
+	color: $grey--black;
+}
 
 /* Styles */
 @mixin type--base-body {
@@ -93,11 +98,6 @@ input {
 	font-weight: $regular;
 	line-height: $base-line-height;
 	color: $grey--black;
-}
-
-@mixin type--base-body-black {
-	@include type--base-body;
-	color: $black;
 }
 
 @mixin type--base-small {
