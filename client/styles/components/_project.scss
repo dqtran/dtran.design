@@ -119,8 +119,6 @@
 	&__insight{
 		@include type--base-body;
 		margin: 0 auto;
-		font-size: $med-font-size;
-		text-align: center;
 		font-style: italic;
 		font-weight: $semibold;
 		margin-top: $spacing-unit;
