@@ -87,7 +87,7 @@
 		@include type--base-body;
 		margin: 0 auto;
 		text-align: left;
-		margin-bottom: $spacing-unit/2;
+		margin-bottom: $spacing-unit;
 		@media (min-width: 300px) { width: 80%; }
 		@media (min-width: 768px) { width: 80%; }
 		@media (min-width: 1024px) { width: 700px; }
@@ -142,7 +142,10 @@
 	&__video {
 		border: none;
 		frameborder: 0;
+		display: block;
+		margin: 0 auto;
 		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
 		@media (min-width: 300px) { width: 90%; height: 162px; }
 		@media (min-width: 768px) { width: 600px; height: 338px; }
 		@media (min-width: 1024px) { width: 700px; height: 393px;}
@@ -212,7 +215,7 @@
 		text-align: center;
 		display: block;
 		@media (min-width: 300px) { 
-			margin-top: 70%; 
+			margin-top: 80%; 
 			height: 120px;
 			width: 120px;
 		}
@@ -229,72 +232,6 @@
 	}
 }
 
-.page-content--seekr-body-alternate {
-	position: relative;
-	background-color: $silver;
-	&__header {
-		@include type--base-body;
-		margin: 0 auto;
-		text-align: center;
-		font-weight: $semibold;
-		padding-top: $spacing-unit;
-		margin-top: $spacing-unit;
-		margin-bottom: $spacing-unit;
-		font-size: $regular-font-size;
-		@media (min-width: 300px) { width: 80%; }
-		@media (min-width: 768px) { width: 80%; }
-		@media (min-width: 1024px) { width: 700px; }
-	}
-}
-
-.page-content--seekr-body {
-	margin-top: $spacing-unit;
-	position: relative;
-	&__header {
-		@include type--base-body;
-		margin: 0 auto;
-		text-align: center;
-		font-weight: $semibold;
-		margin-bottom: $spacing-unit;
-		font-size: $regular-font-size;
-		@media (min-width: 300px) { width: 80%; }
-		@media (min-width: 768px) { width: 80%; }
-		@media (min-width: 1024px) { width: 700px; }
-	}
-	&__asset {
-		text-align: center;
-		display: block;
-		padding-bottom: $spacing-unit;
-		@media (min-width: 300px) {	width: 300px; }
-		@media (min-width: 768px) { width: 450px; }
-		@media (min-width: 1024px) { width: 450px; }
-	}
-	&__info {
-		@include type--base-body;
-		margin: 0 auto;
-		text-align: left;
-		font-style: italic;
-		margin-bottom: $spacing-unit/2;
-		@media (min-width: 300px) { width: 80%; }
-		@media (min-width: 768px) { width: 80%; }
-		@media (min-width: 1024px) { width: 700px; }
-	}
-	&__list {
-		padding-bottom: $spacing-unit;
-	}
-	&__team-member{
-		@include type--base-body;
-		list-style-type: none;
-		margin: 0 auto;
-		text-align: left;
-		margin-bottom: $spacing-unit/3;
-		@media (min-width: 300px) { width: 80%; }
-		@media (min-width: 768px) { width: 80%; }
-		@media (min-width: 1024px) { width: 700px; }
-	}
-}
-
-
 /* Cleancut */
 
 .page-content--cleancut {
@@ -302,7 +239,7 @@
 	@media (min-width: 300px) {
 		background-position: -350px center;
 		background-repeat: no-repeat;
-		background-size: 200% ;
+		background-size: 220% ;
 		height: 600px;
 	}
 	@media (min-width: 768px) { 
@@ -330,7 +267,7 @@
 		text-align: center;
 		display: block;
 		@media (min-width: 300px) { 
-			margin-top: 70%; 
+			margin-top: 80%; 
 			width: 60px;
 		}
 		@media (min-width: 768px) { 
@@ -338,7 +275,7 @@
 			width: 75px; 
 		}
 		@media (min-width: 1024px) { 
-			margin-top: 30%;
+			margin-top: 400px;
 			width: 80px; 
 		}
 	}
@@ -388,7 +325,7 @@
 			width: 350px;
 		}
 		@media (min-width: 1024px) { 
-			margin-top: 35%;
+			margin-top: 500px;
 			width: 400px;
 		}
 	}
@@ -402,7 +339,7 @@
 	@media (min-width: 300px) {
 		background-position: -300px center;
 		background-repeat: no-repeat;
-		background-size: 250% ;
+		background-size: 270% ;
 		height: 600px;
 	}
 	@media (min-width: 768px) { 
@@ -430,7 +367,7 @@
 		text-align: center;
 		display: block;
 		@media (min-width: 300px) { 
-			margin-top: 80%; 
+			margin-top: 85%; 
 			width: 250px;
 		}
 		@media (min-width: 768px) { 
@@ -438,7 +375,7 @@
 			width: 300px;
 		}
 		@media (min-width: 1024px) { 
-			margin-top: 33%;
+			margin-top: 450px;
 			width: 350px;
 		}
 	}
